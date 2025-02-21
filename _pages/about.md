@@ -7,7 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am currently pursuing my Master's degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). 
+
+Originally from China, I completed my undergraduate studies majoring in Electronic Information Engineering, focusing on digital signal processing, image processing, human pose estimation, and embedded systems.
+
+Throughout my academic and career journey, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of algorithms. Over the past few years, I have participated in multiple projects related to image processing, human pose estimation, and embedded systems. These experiences have not only honed my technical skills but also strengthened my capabilities in teamwork and project management.
+
+By continuously learning and exploring, I have mastered various advanced technologies and tools, always maintaining a high sensitivity and enthusiasm for emerging technologies. Looking forward, I am full of anticipation to continue delving into digital signal processing and image processing while being eager to share my knowledge and experiences with more people who are passionate about these fields.
 
 A data-driven personal website
 ======
