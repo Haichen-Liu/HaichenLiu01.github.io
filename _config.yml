@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Haichen Liu/ Personal Homepage"
 title_separator          : "-"
 name                     : &name "Haichen Liu"
-description              : &description "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh. I have a strong passion for digital signal processing, image processing, and computer vision, with an eager interest in exploring the potential applications of these technologies. I am dedicated to contributing to the cutting edge of engineering science through deep learning and research in these areas."
+description              : &description "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh. "
 url                      : https://haichen-liu.github.io/HaichenLiu01.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -25,8 +25,8 @@ author:
   avatar           : "profile.png"
   name             : "Haichen Liu"
   pronouns         : # example: "she/her"  
-  bio              : "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh. I have a strong passion for digital signal processing, image processing, and computer vision, with an eager interest in exploring the potential applications of these technologies. I am dedicated to contributing to the cutting edge of engineering science through deep learning and research in these areas."
-  location         : "Edinburgh, Scotland, United Kingdom"
+  bio              : "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh."
+  location         : "Edinburgh, United Kingdom"
   employer         : "University of Edinburgh"
   uri              : # URL
   email            : "haichenliu2025@gmail.com" 
@@ -50,7 +50,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
