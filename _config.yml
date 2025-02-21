@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Haichen Liu"
+title                    : "Haichen Liu/ Personal Homepage"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Haichen Liu"
+description              : &description "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh. I have a strong passion for digital signal processing, image processing, and computer vision, with an eager interest in exploring the potential applications of these technologies. I am dedicated to contributing to the cutting edge of engineering science through deep learning and research in these areas."
 url                      : https://haichen-liu.github.io/HaichenLiu01.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
