@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Haichen Liu/ Personal Homepage"
+title                    : "Personal Homepage"
 title_separator          : "-"
 name                     : &name "Haichen Liu"
 description              : &description "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh. "
@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "HaichenLiu.png"
   name             : "Haichen Liu"
   pronouns         : # example: "she/her"  
   bio              : "I come from China and I am currently pursuing my Master's degree in Signal Processing and Communications at the School of Engineering, University of Edinburgh."
