@@ -32,7 +32,7 @@ author:
   email            : "haichenliu2025@gmail.com" 
 
   # Academic websites
-  arxiv            : "https://arxiv.org/Haichen-Liu"
+  arxiv            : #"https://arxiv.org/Haichen-Liu"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=wv4jqDEAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0003-3200-1577"
