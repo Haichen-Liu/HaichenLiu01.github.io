@@ -9,7 +9,7 @@ redirect_from:
 
 Hello! 
 
-Currently, I am a student pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
+My name is Haichen Liu. I am currently pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
 
 Throughout my academic career, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms. This includes work with object detection models like [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster RCNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation techniques such as [YOLOPose](https://arxiv.org/abs/2204.06806)(which is based on [YOLO](https://github.com/ultralytics/ultralytics)), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose](https://github.com/facebookresearch/VideoPose3D).
 
@@ -18,7 +18,7 @@ Over the past few years, I have participated in various projects related to imag
 In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate.net/profile/Jianqiang-Mei), I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I2MTC): [AuraPose](https://ieeexplore.ieee.org/document/10561032) and
 [Research and Implementation of Automatic Gain Control Method for Time-Difference Ultrasonic Gas Meter](https://ieeexplore.ieee.org/document/10561236), respectively.
 
-Looking forward, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and their integration with communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
+In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and their integration with communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
 
 For more information
 ------
