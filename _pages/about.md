@@ -11,7 +11,7 @@ Hello!
 
 Currently, I am a student pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
 
-Throughout my academic career, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms. This includes work with target detection models like YOLO, and human pose estimation techniques such as YOLOPose, OpenPose, and VideoPose.
+Throughout my academic career, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms. This includes work with object detection models like YOLO, and human pose estimation techniques such as YOLOPose, OpenPose, and VideoPose.
 
 Over the past few years, I have participated in various projects related to image processing, human pose estimation, and embedded systems. These experiences have not only honed my technical skills but also strengthened my abilities in teamwork and project management. Through continuous learning and exploration, I have mastered numerous advanced technologies and tools, maintaining a high sensitivity and enthusiasm for emerging technologies.
 
