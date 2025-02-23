@@ -7,17 +7,19 @@ redirect_from:
   - /about.html
 ---
 
-Currently, I am a student pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). 
+Hello! 
 
-My academic journey began at [Tianjin University of Technology and Education](https://www.tute.edu.cn/), where I completed my undergraduate studies majoring in Electronic Information Engineering within the [School of Electronic Engineering](https://dianzi.tute.edu.cn/). During my bachelor's, I focused on digital signal processing, image processing, human pose estimation, and embedded systems.
+Currently, I am a student pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
 
-In 2024, I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I2MTC), under the supervision of Prof. [Jianqiang Mei](https://dianzi.tute.edu.cn/info/1073/4042.htm).
+Throughout my academic career, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms. This includes work with target detection models like YOLO, and human pose estimation techniques such as YOLOPose, OpenPose, and VideoPose.
 
-Throughout my academic career, I have been dedicated to applying theoretical knowledge to address practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms, including target detection models like YOLO, human pose estimation techniques such as YOLOPose, OpenPose, and VideoPose. Over the past few years, I have participated in various projects related to image processing, human pose estimation, and embedded systems, which have not only honed my technical skills but also strengthened my abilities in teamwork and project management.
+Over the past few years, I have participated in various projects related to image processing, human pose estimation, and embedded systems. These experiences have not only honed my technical skills but also strengthened my abilities in teamwork and project management. Through continuous learning and exploration, I have mastered numerous advanced technologies and tools, maintaining a high sensitivity and enthusiasm for emerging technologies.
 
-By continuously learning and exploring, I have mastered numerous advanced technologies and tools, maintaining a high sensitivity and enthusiasm for emerging technologies. Looking forward, I am eager to delve deeper into digital signal processing and image processing, aspiring to share my knowledge and experiences with others passionate about these fields.
+In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate.net/profile/Jianqiang-Mei), I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I2MTC): [AuraPose](https://ieeexplore.ieee.org/document/10561032) and
+[Research and Implementation of Automatic Gain Control Method for Time-Difference Ultrasonic Gas Meter](https://ieeexplore.ieee.org/document/10561236)，respectively.
 
+Looking forward, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and their integration with communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
 
-For more info
+For more information
 ------
 For more information about my research and publications, please visit my [Google Scholar](https://scholar.google.com/citations?hl=en&user=wv4jqDEAAAAJ) profile. Here, you can find an up-to-date list of my scholarly works, including publications and citations. Welcome to explore and connect!
