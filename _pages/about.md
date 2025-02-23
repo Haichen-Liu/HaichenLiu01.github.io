@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! 
-
-My name is Haichen Liu. I am currently pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
+Hello! My name is Haichen Liu. I am currently pursuing a Master’s degree in Signal Processing and Communications at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/). My primary focus is on digital signal processing, image processing, communication systems, and machine learning.
 
 Throughout my academic career, I have been dedicated to applying theoretical knowledge to solve practical problems, with a particular emphasis on enhancing the efficiency and accuracy of AI algorithms. This includes work with object detection models like [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster RCNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation techniques such as [YOLOPose](https://arxiv.org/abs/2204.06806) (which is based on [YOLO](https://github.com/ultralytics/ultralytics)), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose](https://github.com/facebookresearch/VideoPose3D).
 
