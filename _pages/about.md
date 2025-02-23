@@ -15,10 +15,10 @@ Throughout my academic career, I have been dedicated to applying theoretical kno
 
 Over the past few years, I have participated in various projects related to image processing, human pose estimation, and embedded systems. These experiences have not only honed my technical skills but also strengthened my abilities in teamwork and project management. Through continuous learning and exploration, I have mastered numerous advanced technologies and tools, maintaining a high sensitivity and enthusiasm for emerging technologies.
 
-In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate.net/profile/Jianqiang-Mei), I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I<sup>2</sup>MTC): [AuraPose](https://ieeexplore.ieee.org/document/10561032) and
+In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate.net/profile/Jianqiang-Mei), I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I2MTC): [AuraPose](https://ieeexplore.ieee.org/document/10561032) and
 [Research and Implementation of Automatic Gain Control Method for Time-Difference Ultrasonic Gas Meter](https://ieeexplore.ieee.org/document/10561236), respectively.
 
-In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and their integration with communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
+In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and related communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
 
 For more information
 ------
