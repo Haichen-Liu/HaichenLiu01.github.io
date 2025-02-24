@@ -16,7 +16,9 @@ Over the past few years, I have participated in various projects related to imag
 In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate.net/profile/Jianqiang-Mei), I contributed to two papers presented at the International Instrumentation and Measurement Technology Conference (I2MTC): [AuraPose](https://ieeexplore.ieee.org/document/10561032) and
 [Research and Implementation of Automatic Gain Control Method for Time-Difference Ultrasonic Gas Meter](https://ieeexplore.ieee.org/document/10561236), respectively.
 
-In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and related communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. If you have any ideas or topics you would like to discuss, please feel free to contact me via [email](haichenliu2025@gmail.com).
+In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and related communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. 
+
+If you have any ideas or topics you would like to discuss, please feel free to contact me via email (haichenliu2025@gmail.com).
 
 For more information
 ------
