@@ -19,7 +19,7 @@ In 2024, under the supervision of Prof. [Jianqiang Mei](https://www.researchgate
 In conclusion, I am eager to delve deeper into the intersection of digital signal processing, image processing, machine learning, and related communication systems. I aspire to share my knowledge and experiences with others who are passionate about these fields. 
 
 
-If you have any ideas or topics you would like to discuss, please feel free to contact me via email (haichenliu2025@gmail.com). You can also find my CV here: [Haichen's Curriculum Vitae](assets/HaichenLiu_CV.pdf).
+If you have any ideas or topics you would like to discuss, please feel free to contact me via email (haichenliu2025@gmail.com). You can also find my CV here: [Haichen's Curriculum Vitae](assets/HaichenLiuCV2.pdf).
 
 For more information
 ------
