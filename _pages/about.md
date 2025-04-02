@@ -20,9 +20,13 @@ In 2024, under the supervision of Prof. [Jianqiang Mei](https://dianzi.tute.edu.
 During my undergraduate years at the School of Electronic Engineering, Tianjin University of Technology and Education, I had the privilege of working under Prof. [Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm) and Prof. [Dan Cheng](https://dianzi.tute.edu.cn/info/1291/25162.htm). They guided me and my peers to notable successes in national and regional competitions, including:
 
 November 2023: Second Prize (National Level) in the Circuit Simulation Design Track (Undergraduate Division) at the 2nd National Simulation Innovation Application Competition.
+
 December 2022: Second Prize (National Level) in the Circuit Simulation Design Track (Undergraduate Division) at the 1st National Simulation Innovation Application Competition.
+
 July 2022: Third Prize (Provincial/Ministerial Level) in the North China Division at the 6th National College Student Integrated Circuit Innovation and Entrepreneurship Competition.
+
 December 2022: Third Prize (Provincial/Ministerial Level) at the 5th Tianjin University Student Information Technology "New Engineering" Practice Innovation Competition.
+
 December 2021: Third Prize (Provincial/Ministerial Level) at the 4th Tianjin University Student Information Technology "New Engineering" Practice Innovation Competition.
 
 Under Prof. Sun’s supervision, I completed my undergraduate thesis, "Design of Intelligent Greenhouse Garden Based on AIoT Technology", which received the Excellent Graduation Project (Thesis) Award in 2023 at Tianjin University of Technology and Education. Scoring 94 points, it ranked first in the School of Electronic Engineering.
