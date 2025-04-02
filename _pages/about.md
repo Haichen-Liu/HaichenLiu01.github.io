@@ -17,7 +17,7 @@ In 2024, under the supervision of Prof. [Jianqiang Mei](https://dianzi.tute.edu.
 [Research and Implementation of Automatic Gain Control Method for Time-Difference Ultrasonic Gas Meter](https://ieeexplore.ieee.org/document/10561236), respectively.
 
 
-During my undergraduate years at the School of Electronic Engineering, Tianjin University of Technology and Education, I had the privilege of working under Prof. [Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm) and Prof. [Dan Cheng](https://dianzi.tute.edu.cn/info/1291/25162.htm). They guided me and my peers to notable successes in national and regional competitions, including:
+During my undergraduate years at the [School of Electronic Engineering](https://dianzi.tute.edu.cn/index.htm), [Tianjin University of Technology and Education](https://www.tute.edu.cn/), I had the privilege of working under Prof. [Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm) and Prof. [Dan Cheng](https://dianzi.tute.edu.cn/info/1291/25162.htm). They guided me and my peers to notable successes in national and regional competitions, including:
 
 November 2023: Second Prize (National Level) in the Circuit Simulation Design Track (Undergraduate Division) at the 2nd National Simulation Innovation Application Competition.
 
