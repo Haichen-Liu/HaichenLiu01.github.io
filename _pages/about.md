@@ -13,7 +13,7 @@ Throughout my academic career, I have been dedicated to applying theoretical kno
 
 Over the past few years, I have engaged in a variety of projects focusing on image processing, human pose estimation, and embedded systems. These experiences have sharpened my technical expertise while enhancing my skills in teamwork and project management. During my undergraduate studies, I had the privilege of working with [Prof. Jianqiang Mei](https://dianzi.tute.edu.cn/info/1291/25232.htm) on projects related to advanced image processing and machine learning. Through continuous learning, I have mastered advanced technologies and tools, maintaining a keen interest in emerging innovations.
 
-During my undergraduate studies, under the guidance of [Prof. Chenguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm), I completed my thesis titled “Design of Intelligent Greenhouse Garden Based on AIoT Technology.” This work earned me the Excellent Graduation Project (Thesis) award, with a grade of 94 points, ranking first in the School of Electronic Engineering in 2023.
+During my undergraduate studies, under the guidance of [Prof. Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm), I completed my thesis titled “Design of Intelligent Greenhouse Garden Based on AIoT Technology.” This work earned me the Excellent Graduation Project (Thesis) award, with a grade of 94 points, ranking first in the School of Electronic Engineering in 2023.
 
 I am thrilled to explore the intersection of digital signal processing, image processing, machine learning, and communication systems. I look forward to collaborating with and inspiring others who share my passion for these dynamic fields.
 
