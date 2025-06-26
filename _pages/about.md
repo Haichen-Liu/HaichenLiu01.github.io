@@ -13,7 +13,7 @@ Throughout my academic career, I have been dedicated to applying theoretical kno
 
 Over the past few years, I have engaged in a variety of projects focusing on image processing, human pose estimation, and embedded systems. These experiences have sharpened my technical expertise while enhancing my skills in teamwork and project management. 
 
-From 2023 to 2025, I had the privilege of working with [Prof. Jianqiang Mei](https://dianzi.tute.edu.cn/info/1291/25232.htm) on projects related to advanced image processing and machine learning. Through continuous learning, I have mastered advanced technologies and tools, maintaining a keen interest in emerging innovations.
+From 2019 to 2025, I had the privilege of working with some excellent professors and students on projects related to internet of things, embedded system, advanced image processing and machine learning. Through continuous learning, I have mastered advanced technologies and tools, maintaining a keen interest in emerging innovations.
 
 I am thrilled to explore the intersection of digital signal processing, image processing, machine learning, and communication systems. I look forward to collaborating with and inspiring others who share my passion for these dynamic fields.
 
