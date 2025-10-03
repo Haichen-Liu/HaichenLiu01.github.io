@@ -26,7 +26,7 @@ In collaboration with Ye Liu, I am exploring the use of:
 
 - **Generative Adversarial Networks (GANs)**:  
   - [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN) for low-light image enhancement.  
-  - [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN) 🎨 for anime-style image generation.  
+  - [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN) for anime-style image generation. 🎨 
 
 - **Diffusion Models**:  
   - [Hugging Face Diffusers](https://github.com/huggingface/diffusers) for high-quality image generation under low-light and complex conditions.  
