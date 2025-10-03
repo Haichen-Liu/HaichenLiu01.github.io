@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 Hello! My name is **Haichen Liu**. I am currently pursuing my Master’s degree at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/).  
-My primary research interests lie in **digital signal processing, image processing, communication systems, and machine learning**. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning **object detection, human pose estimation, and medical imaging**.
+My primary research interests lie in **digital signal processing, image processing, communication systems, and machine learning**. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning **object detection and human pose estimation**.
 
 Throughout my academic journey, I have sought to bridge **theoretical knowledge and practical applications**. My work has included object detection models such as [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster RCNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation methods like [YOLOPose](https://arxiv.org/abs/2204.06806), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D).
 
