@@ -17,11 +17,19 @@ Under the guidance of Prof. Mei, I had the opportunity to broaden my expertise i
 ---
 
 ### 🔍 Current Research Interests
-At present, my main research focuses on **object detection** and **image generation**.  
+### 🔍 Current Research Interests
+At present, my main research focuses on **object detection** and **image generation for low-light image enhancement and style transfer**.  
 In collaboration with Ye Liu, I am exploring the use of:  
-- [SCINet](https://github.com/cure-lab/SCINet) (improved for feature decomposition in deep networks)  
-- [GANs](https://github.com/eriklindernoren/PyTorch-GAN)  
-- [Diffusion Models](https://github.com/huggingface/diffusers) to generate **high-quality low-light images** and develop novel methods for **anime-style image generation** 🎨✨ using approaches such as [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN).  
+
+- **Network structure innovations**:  
+  - [SCINet](https://github.com/cure-lab/SCINet), adapted from time-series decomposition to improve feature extraction and multi-scale representation in image enhancement.  
+
+- **Generative Adversarial Networks (GANs)**:  
+  - [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN) for low-light image enhancement.  
+  - [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN) 🎨 for anime-style image generation.  
+
+- **Diffusion Models**:  
+  - [Hugging Face Diffusers](https://github.com/huggingface/diffusers) for high-quality image generation under low-light and complex conditions.  
 
 ---
 
