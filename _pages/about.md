@@ -18,8 +18,7 @@ From **2019 to 2025**, I had the privilege of working with [Prof. Jianqiang Mei]
 ---
 
 ### 🔍 Current Research Interests
-At present, my main research focuses on **object detection** and **image generation for low-light image enhancement and style transfer**.  
-In collaboration with Ye Liu, I am exploring the use of:  
+At present, my main research focuses on **object detection** and **image generation for low-light image enhancement and style transfer**. 
 
 - **Network structure innovations**:  
   - [SCINet](https://github.com/cure-lab/SCINet), adapted from time-series decomposition to improve feature extraction and multi-scale representation in image enhancement.  
