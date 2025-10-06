@@ -22,15 +22,15 @@ From 2019 to 2025, I had the privilege of working with [Prof. Jianqiang Mei](htt
 
 ### 🔍 Recently, I have been learning and exploring topics related to **object detection** and **image generation for low-light image enhancement and style transfer**.
 
-- **Network structure exploration**:  
-  - Studying [SCINet](https://github.com/cure-lab/SCINet), originally designed for time-series decomposition, and exploring its potential for improving feature extraction and multi-scale representation in image enhancement.  
-
 - **Generative Adversarial Networks (GANs)**:  
   - Learning to implement [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN) for low-light image enhancement.  
   - Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 🎨  
 
 - **Diffusion Models**:  
   - Experimenting with [Hugging Face Diffusers](https://github.com/huggingface/diffusers) to understand high-quality image generation under complex visual conditions.  
+
+- **Network structure exploration**:  
+  - Studying [SCINet](https://github.com/cure-lab/SCINet), originally designed for time-series decomposition, and exploring its potential for improving feature extraction and multi-scale representation in image enhancement. 
 
 ---
 
