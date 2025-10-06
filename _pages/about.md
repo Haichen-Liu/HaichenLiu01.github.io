@@ -3,9 +3,6 @@ permalink: /
 title: "About me"
 author_profile: true
 classes: wide  # ✅ 就加这一行让页面变宽！
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.2"
 redirect_from: 
   - /about/
   - /about.html
