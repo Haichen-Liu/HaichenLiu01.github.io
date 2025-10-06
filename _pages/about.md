@@ -6,7 +6,6 @@ classes: wide  # ✅ 就加这一行让页面变宽！
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /assets/images/banner.jpg  # ✅ 可选，如果没有这张图，可删除这一行
 redirect_from: 
   - /about/
   - /about.html
