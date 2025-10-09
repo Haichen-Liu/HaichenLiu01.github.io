@@ -1,14 +1,17 @@
 ---
 permalink: /
 title: "About me"
-author_profile: true
-classes: wide  # ✅ 页面加宽
-redirect_from: 
+layout: single         # ✅ 用 single 布局
+classes: wide          # ✅ 正文加宽
+author_profile: false  # ✅ 关闭左侧作者栏，否则不会全宽
+sidebar: false         # ✅ 关闭任何侧栏
+redirect_from:
   - /about/
   - /about.html
 ---
 
-Hello! My name is Haichen Liu.  I am currently pursuing my **Master’s degree** at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/), where I’m fortunate to be supervised by Professor [Sotirios Tsaftaris](https://eng.ed.ac.uk/about/people/professor-sotirios-tsaftaris).  
+
+Hello! My name is Haichen Liu.  I am currently pursuing my Master’s degree at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/), where I’m fortunate to be supervised by Professor [Sotirios Tsaftaris](https://eng.ed.ac.uk/about/people/professor-sotirios-tsaftaris).  
 
 My primary research interests lie in *machine learning, image processing, computer vision, and digital signal processing*. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning object detection and human pose estimation. Throughout my academic journey, I have sought to bridge theoretical knowledge and practical applications. My work has included object detection models such as  [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster R-CNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation methods like [YOLOPose](https://arxiv.org/abs/2204.06806), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D).  
 
@@ -28,17 +31,15 @@ I am currently conducting research on **Visual Anagrams** and **Optical Illusion
 - [**Hugging Face Diffusers**](https://github.com/huggingface/diffusers) — implementing diffusion-based synthesis for perceptually consistent visual outputs  
 
 ---
-
 ### 🎨 Personal Interests
 
 I also enjoy **anime**, which inspires my interest in artistic image generation and creative AI.  
 - Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 🎨  
-
 ---
 
 ### 🚀 Looking Ahead
 
-I am excited to continue exploring the intersections of **machine learning, image processing, computer vision, and digital signal processing**, and to contribute to research that is both scientifically impactful and practically meaningful. You can find more about my work and access free full-text publications on my [**MDPI SciProfiles page**](https://sciprofiles.com/profile/HaichenLiu).  
+I am excited to continue exploring the intersections of **machine learning, image processing, computer vision, and digital signal processing**, and to contribute to research that is both scientifically impactful and practically meaningful. You can find more about my work and access free full-text publications on my [MDPI SciProfiles page](https://sciprofiles.com/publications).  
 
 If you would like to connect or discuss potential collaborations, please feel free to reach me at:  
 📧 18805644868@139.com | 📧 s2604458@ed.ac.uk  
