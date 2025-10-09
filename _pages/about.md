@@ -1,11 +1,9 @@
 ---
 permalink: /
 title: "About me"
-layout: single         # ✅ 用 single 布局
-classes: wide          # ✅ 正文加宽
-author_profile: false  # ✅ 关闭左侧作者栏，否则不会全宽
-sidebar: false         # ✅ 关闭任何侧栏
-redirect_from:
+author_profile: true
+classes: wide  # ✅ 页面加宽
+redirect_from: 
   - /about/
   - /about.html
 ---
@@ -31,10 +29,13 @@ I am currently conducting research on **Visual Anagrams** and **Optical Illusion
 - [**Hugging Face Diffusers**](https://github.com/huggingface/diffusers) — implementing diffusion-based synthesis for perceptually consistent visual outputs  
 
 ---
+
 ### 🎨 Personal Interests
 
 I also enjoy **anime**, which inspires my interest in artistic image generation and creative AI.  
+
 - Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 🎨  
+
 ---
 
 ### 🚀 Looking Ahead
