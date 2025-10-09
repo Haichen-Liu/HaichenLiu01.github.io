@@ -40,7 +40,7 @@ I also enjoy **anime**, which inspires my interest in artistic image generation 
 
 ### 🚀 Looking Ahead
 
-I am excited to continue exploring the intersections of **machine learning, image processing, computer vision, and digital signal processing**, and to contribute to research that is both scientifically impactful and practically meaningful. You can find more about my work and access free full-text publications on my [MDPI SciProfiles page](https://sciprofiles.com/publications).  
+I am excited to continue exploring the intersections of **machine learning, image processing, computer vision, and digital signal processing**, and to contribute to research that is both scientifically impactful and practically meaningful.
 
 If you would like to connect or discuss potential collaborations, please feel free to reach me at:  
 📧 18805644868@139.com | 📧 s2604458@ed.ac.uk  
