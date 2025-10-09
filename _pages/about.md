@@ -34,7 +34,7 @@ I am currently conducting research on **Visual Anagrams** and **Optical Illusion
 
 I also enjoy **anime**, which inspires my interest in artistic image generation and creative AI.  
 
-- Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 🎨  
+- Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 
 
 ---
 
