@@ -1,9 +1,10 @@
 ---
 permalink: /
 title: "About me"
-author_profile: true
-classes: wide  # ✅ 页面加宽
-redirect_from: 
+layout: single        # ✅ 使用标准单页布局
+author_profile: true  # ✅ 保留左侧作者栏
+classes: wide         # ✅ 扩展右侧正文区域
+redirect_from:
   - /about/
   - /about.html
 ---
