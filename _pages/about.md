@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! My name is Haichen Liu. I am currently pursuing my Master’s degree at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/), where I’m fortunate to be **supervised by Professor [Sotirios Tsaftaris](https://eng.ed.ac.uk/about/people/professor-sotirios-tsaftaris)**.  
+Hello! My name is Haichen Liu. I am currently pursuing my Master’s degree at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/), where I’m fortunate to be supervised by Professor [Sotirios Tsaftaris](https://eng.ed.ac.uk/about/people/professor-sotirios-tsaftaris).  
 
 My primary research interests lie in **machine learning, image processing, computer vision, and digital signal processing**. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning **object detection** and **human pose estimation**.  
 Throughout my academic journey, I have sought to bridge theoretical knowledge and practical applications.  
