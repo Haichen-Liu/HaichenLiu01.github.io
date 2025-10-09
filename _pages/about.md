@@ -23,21 +23,6 @@ From 2019 to 2025, I had the privilege of working with Prof. [Jianqiang Mei](htt
 - [**Hugging Face Diffusers**](https://github.com/huggingface/diffusers) — implementing diffusion-based synthesis for perceptually consistent visual outputs  
 
 
-
-Additionally, **Ye Liu** and I are collaborating on a follow-up to our previous work **DarkYOLO**, exploring new approaches for low-light object detection.  
-
----
-- **Generative Adversarial Networks (GANs)**  
-  Additionally, I have been learning and exploring topics related to **object detection** and **image generation for low-light image enhancement and style transfer**.  
-  - Learning to implement [GAN](https://github.com/eriklindernoren/PyTorch-GAN) for low-light image enhancement.  
-
-- **Diffusion Models**  
-  - Experimenting with [Hugging Face Diffusers](https://github.com/huggingface/diffusers) to understand high-quality image generation under complex visual conditions.  
-
-- **Network Structure Exploration**  
-  - Studying [SCINet](https://github.com/cure-lab/SCINet), originally designed for time-series decomposition, and exploring its potential for improving feature extraction and multi-scale representation in image enhancement.  
----
-
 I also enjoy **anime**, which inspires my interest in artistic image generation.  
 - Exploring artistic style generation with [AniGAN](https://github.com/bing-li-ai/AniGAN), [AnimeGAN](https://github.com/TachibanaYoshino/AnimeGAN), and [MangaGAN](https://github.com/nikitaa30/Manga-GAN). 🎨  
 
