@@ -15,7 +15,7 @@ My primary research interests lie in machine learning, image processing, compute
 
 ---
 
-Before pursuing my master’s studies at the University of Edinburgh, I had the privilege of working with Prof. [Jianqiang Mei](https://dianzi.tute.edu.cn/info/1291/25232.htm), Prof. [Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm), Prof. [Dan Cheng](https://dianzi.tute.edu.cn/info/1291/25162.htm), and Prof. [Xuewen Ding](https://dianzi.tute.edu.cn/info/1291/25172.htm)  on topics related to the internet of things, embedded systems, image processing, and machine learning. Under the guidance of Prof. Mei, I broadened my expertise in advanced imaging and machine learning techniques, which laid a strong foundation for my later research. Additionally, my friend and collaborator **Ye Liu** has been an important part of my academic journey, providing both intellectual support and encouragement throughout my studies.  
+Before pursuing my master’s studies at the University of Edinburgh, I had the privilege of working with Prof. [Jianqiang Mei](https://dianzi.tute.edu.cn/info/1291/25232.htm), Prof. [Chengguang Sun](https://dianzi.tute.edu.cn/info/1291/25242.htm), Prof. [Dan Cheng](https://dianzi.tute.edu.cn/info/1291/25162.htm), and Prof. [Xuewen Ding](https://dianzi.tute.edu.cn/info/1291/25172.htm)  on topics related to the internet of things, embedded systems, image processing, and machine learning. Under the guidance of Prof. Jianqiang Mei, I broadened my expertise in advanced imaging and machine learning techniques, which laid a strong foundation for my later research. Additionally, my friend and collaborator Ye Liu has been an important part of my academic journey, providing both intellectual support and encouragement throughout my studies.  
 
 ---
 
