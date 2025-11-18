@@ -36,8 +36,9 @@ I am currently conducting research on **Visual Anagrams and Optical Illusions** 
 
 | **Experiment 1** | **Experiment 2** | **Experiment 3** |
 | :---: | :---: | :---: |
-| <video width="100%" controls><source src="{{ '/images/3.mp4' | relative_url }}" type="video/mp4"></video> | <video width="100%" controls><source src="{{ '/images/6.mp4' | relative_url }}" type="video/mp4"></video> | <video width="100%" controls><source src="{{ '/images/7.mp4' | relative_url }}" type="video/mp4"></video> |
+| <video width="100%" autoplay loop muted playsinline controls><source src="{{ '/images/3.mp4' | relative_url }}" type="video/mp4"></video> | <video width="100%" autoplay loop muted playsinline controls><source src="{{ '/images/6.mp4' | relative_url }}" type="video/mp4"></video> | <video width="100%" autoplay loop muted playsinline controls><source src="{{ '/images/7.mp4' | relative_url }}" type="video/mp4"></video> |
 | *Transformation Video* | *Transformation Video* | *Transformation Video* |
+
 
 
 
