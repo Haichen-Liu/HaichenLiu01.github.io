@@ -24,17 +24,6 @@ Before pursuing my master’s studies, I had the privilege of working with Prof.
 I am currently conducting research on **Visual Anagrams and Optical Illusions** at the University of Edinburgh, under the supervision of Prof. Tsaftaris, Dr. Dimitrakopoulos, and Mr. Vilouras. My work investigates how **generative diffusion models** and **Generative Adversarial Networks (GANs)** can be used to create **multi-view optical illusions** that explore the boundaries between **visual perception** and **machine generation**. This research focuses on understanding how generative models represent **ambiguous visual information**, and how content–style and content–content interactions influence the creation of perceptually coherent yet semantically distinct images. The ultimate goal is to provide insights into **human perception** and **AI interpretability** through the lens of generative modeling.
 
 
-### 🖼️ Preliminary Results
-Below are examples of visual anagrams I generated locally. The images in the first row represent the **Identity View**, while the second row reveals the hidden semantics upon **Transformation** (e.g., rotation or permutation).
-
-| **Experiment A** | **Experiment B** |
-| :---: | :---: |
-| <img src="/images/6.png" width="100%"> | <img src="/images/7.png" width="100%"> |
-| *Identity View (Original)* | *Identity View (Original)* |
-| <img src="/images/6I.png" width="100%"> | <img src="/images/7I.png" width="100%"> |
-| *Transformed View (Illusion)* | *Transformed View (Illusion)* |
-
-
 
 ### 🔗 Related Projects
 - [**Visual Anagrams**](https://github.com/dangeng/visual_anagrams) — exploring multi-view optical illusion generation with diffusion models  
