@@ -29,9 +29,9 @@ Below are examples of visual anagrams I generated locally. The images in the fir
 
 | **Experiment A** | **Experiment B** |
 | :---: | :---: |
-| <img src="/image/6.png" width="100%"> | <img src="/image/7.png" width="100%"> |
+| <img src="/images/6.png" width="100%"> | <img src="/images/7.png" width="100%"> |
 | *Identity View (Original)* | *Identity View (Original)* |
-| <img src="/image/6I.png" width="100%"> | <img src="/image/7I.png" width="100%"> |
+| <img src="/images/6I.png" width="100%"> | <img src="/images/7I.png" width="100%"> |
 | *Transformed View (Illusion)* | *Transformed View (Illusion)* |
 
 
