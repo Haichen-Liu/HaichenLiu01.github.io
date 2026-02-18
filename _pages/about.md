@@ -11,7 +11,7 @@ redirect_from:
 
 Hello! I am currently pursuing my master’s degree at the [School of Engineering](https://eng.ed.ac.uk/), [University of Edinburgh](https://www.ed.ac.uk/), where I’m fortunate to be supervised by Prof. [Sotirios A. Tsaftaris](https://eng.ed.ac.uk/about/people/professor-sotirios-tsaftaris), with co-supervision from Dr. [Panos Dimitrakopoulos](https://vios.science/team/panos) and Mr. [Konstantinos Vilouras](https://vios.science/team/kostas).
 
-My primary research interests lie in machine learning, image processing, computer vision, and digital signal processing. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning object detection and human pose estimation. Throughout my academic journey, I have sought to bridge theoretical knowledge and practical applications. My work has included object detection models such as  [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster R-CNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation methods like [YOLOPose](https://arxiv.org/abs/2204.06806), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D).  
+My primary research interests lie in deep learning, image processing, and computer vision. I am particularly interested in enhancing the efficiency and accuracy of AI algorithms, with applications spanning object detection and human pose estimation. Throughout my academic journey, I have sought to bridge theoretical knowledge and practical applications. My work has included object detection models such as  [YOLO](https://github.com/ultralytics/ultralytics), [DETR](https://github.com/facebookresearch/detr), [SSD](https://github.com/amdegroot/ssd.pytorch), and [Faster R-CNN](https://github.com/jwyang/faster-rcnn.pytorch), as well as human pose estimation methods like [YOLOPose](https://arxiv.org/abs/2204.06806), [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D).  
 
 ---
 
@@ -21,7 +21,7 @@ Before pursuing my master’s studies, I had the privilege of working with Prof.
 
 ### 🔍 Current Research
 
-I am currently conducting research on **Visual Anagrams and Optical Illusions** at the University of Edinburgh, under the supervision of Prof. Tsaftaris, Dr. Dimitrakopoulos, and Mr. Vilouras. My work investigates how **generative diffusion models** and **Generative Adversarial Networks (GANs)** can be used to create **multi-view optical illusions** that explore the boundaries between **visual perception** and **machine generation**. This research focuses on understanding how generative models represent **ambiguous visual information**, and how content–style and content–content interactions influence the creation of perceptually coherent yet semantically distinct images. The ultimate goal is to provide insights into **human perception** and **AI interpretability** through the lens of generative modeling.
+I am currently conducting research on **Visual Anagrams and Optical Illusions** at the University of Edinburgh, under the supervision of Prof. Tsaftaris, Dr. Dimitrakopoulos, and Mr. Vilouras. My work investigates how **generative diffusion models** can be used to create **multi-view optical illusions** that explore the boundaries between **visual perception** and **machine generation**. This research focuses on understanding how generative models represent **ambiguous visual information**, and how content–style and content–content interactions influence the creation of perceptually coherent yet semantically distinct images. The ultimate goal is to provide insights into **human perception** and **AI interpretability** through the lens of generative modeling.
 
 #### 🖼️ Visual Anagram Examples
 
@@ -44,7 +44,6 @@ I am currently conducting research on **Visual Anagrams and Optical Illusions** 
 
 ### 🔗 Related Projects
 - [**Visual Anagrams**](https://github.com/dangeng/visual_anagrams) — exploring multi-view optical illusion generation with diffusion models  
-- [**GAN**](https://github.com/eriklindernoren/PyTorch-GAN) — experimenting with adversarial frameworks for visual realism and feature disentanglement  
 - [**Hugging Face Diffusers**](https://github.com/huggingface/diffusers) — implementing and customizing diffusion-based generation for perceptual alignment studies  
 
 
@@ -60,7 +59,7 @@ I also enjoy **anime**, which inspires my interest in artistic image generation 
 
 ### 🚀 Looking Ahead
 
-I am excited to continue exploring the intersections of **machine learning, image processing, computer vision, and digital signal processing**, and to contribute to research that is both scientifically impactful and practically meaningful.
+I am excited to continue exploring the intersections of **deep learning, image processing, and computer vision**, and to contribute to research that is both scientifically impactful and practically meaningful.
 
 If you would like to connect or discuss potential collaborations, please feel free to reach me at:  
 📧 18805644868@139.com | 📧 s2604458@ed.ac.uk  
