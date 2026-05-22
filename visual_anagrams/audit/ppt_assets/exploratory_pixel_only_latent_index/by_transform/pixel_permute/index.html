@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploratory: pixel_permute</title>
+<style>
+:root {
+  --ink: #18202b;
+  --muted: #637083;
+  --line: #d7dde7;
+  --blue: #1657c5;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+header {
+  padding: 22px 28px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+header h1 { margin: 0; font-size: 24px; }
+header .crumbs { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+header .crumbs a { color: var(--blue); text-decoration: none; }
+header p { margin: 8px 0 0; color: var(--muted); max-width: 1080px; }
+main { max-width: 1480px; margin: 0 auto; padding: 22px 28px 60px; }
+.caveat {
+  background: #fff8e1;
+  border: 1px solid #f7d486;
+  color: #6b4f00;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.case-meta {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+.case-meta dl { margin: 0; display: grid; grid-template-columns: 160px 1fr; gap: 6px 12px; }
+.case-meta dt { color: var(--muted); }
+.case-meta dd { margin: 0; }
+.grid-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+.grid-table th, .grid-table td { padding: 6px; vertical-align: middle; }
+.grid-table tr.weight-header th {
+  font-size: 14px; font-weight: 700; color: #fff; padding: 8px 6px;
+}
+.grid-table tr.ab-header th {
+  font-size: 11px; font-weight: 600; color: var(--muted); padding: 4px 6px;
+}
+.grid-table tr.seed-row td.label {
+  font-size: 12px; color: var(--muted); font-weight: 600;
+  text-align: right; padding-right: 12px; width: 80px;
+}
+.grid-table tr.seed-row:nth-child(even) { background: #f8fafc; }
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #eef2f8;
+}
+.image-pair img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #eef2f8;
+  display: block;
+}
+.image-pair a { display: block; }
+.image-pair a:hover img { opacity: 0.85; }
+.h-equal   { background: #6b7280; }
+.h-reverse { background: #16a34a; }
+.bottom-link {
+  display: inline-block; margin-top: 18px; padding: 8px 14px;
+  border-radius: 8px; background: #eef2ff; color: #1e3a8a;
+  font-weight: 700; text-decoration: none; border: 1px solid #c7d2fe;
+}
+.transform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+.transform-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.transform-card:hover { border-color: var(--blue); box-shadow: 0 2px 10px rgba(22,87,197,0.08); }
+.transform-card-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.transform-card img { width: 100%; border-radius: 6px; border: 1px solid var(--line); background: #eef2f8; }
+.transform-card p { margin: 8px 0 0; font-size: 12px; color: var(--muted); line-height: 1.45; }
+</style>
+</head>
+<body>
+<header>
+  <div class="crumbs"><a href="../../">&larr; Exploratory index</a> &middot; <a href="../../../../../">&larr; LAVA project</a></div>
+  <h1>pixel_permute</h1>
+  <p>Transform mechanism (latent side): Random permutation of all 64x64 = 4096 spatial positions, shared across channels. Permutation indices fixed by seed 12345.</p>
+</header>
+<main>
+  <div class="caveat">
+    <strong>Exploratory only.</strong> This transform breaks the latent-equivariance assumption documented in Geng et al. (CVPR 2024, &sect;3.5).
+    Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>.
+    The formal LAVA experiment is restricted to grid-preserving transforms (rotations and flips).
+    <br>
+    <em>非正式探索。</em>这一 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5) 的 latent-equivariance 假设;
+    输出视觉上可能有趣，但<strong>不构成正式证据</strong>。
+  </div>
+
+  <div class="case-meta">
+    <dl>
+      <dt>Transform name</dt><dd>pixel_permute</dd>
+      <dt>Prompt A (canonical)</dt><dd>An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background</dd>
+      <dt>Prompt B (transformed)</dt><dd>An oil painting of a standing rooster with colorful feathers, simple background</dd>
+      <dt>Seeds shown</dt><dd>42, 123, 777, 2024, 7 (5 fixed seeds)</dd>
+      <dt>Weight conditions</dt><dd>Equal [0.5, 0.5] (baseline) and Reverse [0.40, 0.60] (LAVA reverse weighting)</dd>
+      <dt>Per-cell layout</dt><dd>Each thumbnail is a 2-up showing View A (canonical reading, raw output) on the left and View B (transformed reading, image-space transform applied) on the right.</dd>
+      <dt>Image-space View B</dt><dd>Best-effort PIL equivalent of the latent-side transform: e.g.\ ImageOps invert for negate, AFFINE shear for skew, seeded patch permutation at 8x scale-up for the permute family. Not a formal equivalence claim.</dd>
+    </dl>
+  </div>
+
+  <table class="grid-table">
+    <thead>
+      <tr class="weight-header">
+        <th></th>
+        <th class="h-equal">Equal [0.5, 0.5]</th>
+        <th class="h-reverse">Reverse [0.40, 0.60]</th>
+      </tr>
+      <tr class="ab-header">
+        <th>seed</th>
+        <th>A &middot; B</th>
+        <th>A &middot; B</th>
+      </tr>
+    </thead>
+    <tbody>
+            <tr class="seed-row"><td class="label">seed 42</td><td><div class="image-pair"><a href="seed42_w_equal_viewA.png" target="_blank"><img src="seed42_w_equal_viewA.png" alt="seed42 w_equal A" loading="lazy"></a><a href="seed42_w_equal_viewB.png" target="_blank"><img src="seed42_w_equal_viewB.png" alt="seed42 w_equal B" loading="lazy"></a></div></td><td><div class="image-pair"><a href="seed42_w_reverse_viewA.png" target="_blank"><img src="seed42_w_reverse_viewA.png" alt="seed42 w_reverse A" loading="lazy"></a><a href="seed42_w_reverse_viewB.png" target="_blank"><img src="seed42_w_reverse_viewB.png" alt="seed42 w_reverse B" loading="lazy"></a></div></td></tr>
+      <tr class="seed-row"><td class="label">seed 123</td><td><div class="image-pair"><a href="seed123_w_equal_viewA.png" target="_blank"><img src="seed123_w_equal_viewA.png" alt="seed123 w_equal A" loading="lazy"></a><a href="seed123_w_equal_viewB.png" target="_blank"><img src="seed123_w_equal_viewB.png" alt="seed123 w_equal B" loading="lazy"></a></div></td><td><div class="image-pair"><a href="seed123_w_reverse_viewA.png" target="_blank"><img src="seed123_w_reverse_viewA.png" alt="seed123 w_reverse A" loading="lazy"></a><a href="seed123_w_reverse_viewB.png" target="_blank"><img src="seed123_w_reverse_viewB.png" alt="seed123 w_reverse B" loading="lazy"></a></div></td></tr>
+      <tr class="seed-row"><td class="label">seed 777</td><td><div class="image-pair"><a href="seed777_w_equal_viewA.png" target="_blank"><img src="seed777_w_equal_viewA.png" alt="seed777 w_equal A" loading="lazy"></a><a href="seed777_w_equal_viewB.png" target="_blank"><img src="seed777_w_equal_viewB.png" alt="seed777 w_equal B" loading="lazy"></a></div></td><td><div class="image-pair"><a href="seed777_w_reverse_viewA.png" target="_blank"><img src="seed777_w_reverse_viewA.png" alt="seed777 w_reverse A" loading="lazy"></a><a href="seed777_w_reverse_viewB.png" target="_blank"><img src="seed777_w_reverse_viewB.png" alt="seed777 w_reverse B" loading="lazy"></a></div></td></tr>
+      <tr class="seed-row"><td class="label">seed 2024</td><td><div class="image-pair"><a href="seed2024_w_equal_viewA.png" target="_blank"><img src="seed2024_w_equal_viewA.png" alt="seed2024 w_equal A" loading="lazy"></a><a href="seed2024_w_equal_viewB.png" target="_blank"><img src="seed2024_w_equal_viewB.png" alt="seed2024 w_equal B" loading="lazy"></a></div></td><td><div class="image-pair"><a href="seed2024_w_reverse_viewA.png" target="_blank"><img src="seed2024_w_reverse_viewA.png" alt="seed2024 w_reverse A" loading="lazy"></a><a href="seed2024_w_reverse_viewB.png" target="_blank"><img src="seed2024_w_reverse_viewB.png" alt="seed2024 w_reverse B" loading="lazy"></a></div></td></tr>
+      <tr class="seed-row"><td class="label">seed 7</td><td><div class="image-pair"><a href="seed7_w_equal_viewA.png" target="_blank"><img src="seed7_w_equal_viewA.png" alt="seed7 w_equal A" loading="lazy"></a><a href="seed7_w_equal_viewB.png" target="_blank"><img src="seed7_w_equal_viewB.png" alt="seed7 w_equal B" loading="lazy"></a></div></td><td><div class="image-pair"><a href="seed7_w_reverse_viewA.png" target="_blank"><img src="seed7_w_reverse_viewA.png" alt="seed7 w_reverse A" loading="lazy"></a><a href="seed7_w_reverse_viewB.png" target="_blank"><img src="seed7_w_reverse_viewB.png" alt="seed7 w_reverse B" loading="lazy"></a></div></td></tr>
+    </tbody>
+  </table>
+
+  <a class="bottom-link" href="../../">&larr; Back to exploratory index</a>
+</main>
+</body>
+</html>
