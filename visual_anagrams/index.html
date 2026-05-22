@@ -1164,6 +1164,81 @@
         <p class="table-note">Source: <code>outputs/ablation/ablation_sweep_birdcat/sweep_summary.csv</code>. More aggressive [0.35, 0.65] gives larger View2 but loses CLIP_Avg through View1 degradation. This is a preliminary calibration sweep, not a global-optimality claim; [0.30, 0.70] was not tested and remains future work.</p>
       </div>
     </details>
+
+    <details>
+      <summary>4. Exploratory &mdash; pixel-only transforms forced into latent (NOT formal evidence)</summary>
+
+      <p class="table-note" style="margin-top: 14px; background:#fff8e1; border:1px solid #f7d486; color:#6b4f00; padding:10px 14px; border-radius:8px;">
+        <strong>Exploratory only.</strong> These transforms break the latent-equivariance assumption documented in Geng et al. (CVPR 2024, Section 3.5). Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>. The formal LAVA experiment is deliberately restricted to grid-preserving transforms (rotations and flips). This section is a sandbox probe; data on this page does NOT enter any thesis / paper / quantitative claim.
+        <br><br>
+        <em>非正式探索。</em>这些 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5) 的 latent-equivariance 假设。输出视觉上可能有趣，但<strong>不构成正式证据</strong>。正式 LAVA 实验仅限于 grid-preserving transform（rotation / flip）。这一节是 sandbox 探索，<strong>不进入</strong>任何 thesis / paper / 定量主张。
+      </p>
+
+      <p class="table-note">
+        Setup: 7 latent-impossible transforms &times; 5 fixed seeds &times; 2 weight conditions (Equal [0.5, 0.5] vs LAVA Reverse [0.40, 0.60]) = 70 generations. Prompt pair: <em>bouquet</em> &harr; <em>rooster</em> (oil painting). View A is always identity; View B uses the named transform.
+      </p>
+
+      <a class="audit-link" href="audit/ppt_assets/exploratory_pixel_only_latent_index/index.html" target="_blank">Open standalone exploratory index (full per-transform labeled grids + 70 individual PNGs)</a>
+
+      <div class="figure-block" style="margin-top: 14px;">
+        <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/overview/cross_transform_seed42.png" target="_blank">
+          <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/overview/cross_transform_seed42.png" alt="Cross-transform overview at seed=42" loading="lazy" style="max-width: 100%; border: 1px solid #d0d7de; border-radius: 4px;">
+        </a>
+        <p class="figure-caption">
+          <span class="fig-label">Exploratory overview.</span>
+          Seven latent-impossible transforms at seed=42, both weight conditions (left column Equal, right column Reverse). The labeled per-transform grids below show all five seeds for each transform.
+        </p>
+      </div>
+
+      <div class="audit-card-grid">
+        <div class="audit-card">
+          <div class="audit-card-title">negate <span>sign flip</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/negate/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/negate/labeled_grid.png" alt="negate labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">skew <span>15&deg; shear</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/skew/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/skew/labeled_grid.png" alt="skew labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">pixel_permute <span>4096 positions</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/pixel_permute/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/pixel_permute/labeled_grid.png" alt="pixel_permute labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">patch_permute_8x8 <span>64 patches</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/patch_permute_8x8/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/patch_permute_8x8/labeled_grid.png" alt="patch_permute_8x8 labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">inner_circle <span>masked rotation</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/inner_circle/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/inner_circle/labeled_grid.png" alt="inner_circle labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">square_hinge_tophalf <span>half rotation</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/square_hinge_tophalf/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/square_hinge_tophalf/labeled_grid.png" alt="square_hinge_tophalf labeled grid" loading="lazy">
+          </a>
+        </div>
+        <div class="audit-card">
+          <div class="audit-card-title">jigsaw_4x4 <span>16 pieces</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/jigsaw_4x4/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/jigsaw_4x4/labeled_grid.png" alt="jigsaw_4x4 labeled grid" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <p class="table-note">
+        Reading rule: this section visually confirms that the diffusion pipeline still produces output even when the latent-equivariance assumption is broken, but the image-space semantics of the View B branch are not guaranteed. The formal LAVA quantitative claims (Sections 1-3 above) use only grid-preserving transforms.
+      </p>
+    </details>
   </section>
   </body>
 </html>

@@ -1,0 +1,167 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Exploratory: pixel-only transforms in latent</title>
+<style>
+body{font-family:Inter,system-ui,sans-serif;max-width:1200px;margin:24px auto;padding:0 20px;color:#1d2330;line-height:1.5;}
+h1{font-size:24px;border-bottom:1px solid #cfd6e0;padding-bottom:8px;}
+h2{font-size:18px;margin-top:32px;color:#0d3b6a;}
+.caveat{background:#fff8e1;border:1px solid #f7d486;padding:12px 16px;border-radius:8px;color:#6b4f00;}
+.transform{background:#fff;border:1px solid #d7dde7;border-radius:10px;padding:14px 16px;margin-bottom:18px;}
+.transform p{margin:6px 0;font-size:13px;color:#444;}
+.transform img{max-width:100%;border:1px solid #d7dde7;border-radius:6px;}
+.prompts{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:#555;}
+</style></head><body>
+<h1>Exploratory: pixel-only transforms forced into latent</h1>
+<p class="caveat"><strong>Exploratory only.</strong> These transforms break the latent-equivariance assumption documented in Geng et al. (CVPR 2024, Section 3.5). Outputs may be visually interesting but do not constitute formal evidence. The formal LAVA experiment is restricted to grid-preserving transforms (rotations and flips). <br><br><em>非正式探索。</em>这些 transform 破坏了 Geng et al. (CVPR 2024, §3.5) 中描述的 latent-equivariance 假设。输出可能视觉有趣，但不构成正式证据。正式 LAVA 实验限制在 grid-preserving transform (rotation / flip) 范围内。</p>
+<h2>Overview &mdash; cross-transform comparison at seed=42</h2>
+<p>One image per (transform, weight). View A always identity. View B uses the named latent-side transform. Same bouquet&hArr;rooster prompt pair.</p>
+<img src="overview/cross_transform_seed42.png" alt="cross-transform overview">
+<h2>Per-transform: 5 seeds &times; 2 weighting conditions</h2>
+<p>Each labeled grid: rows = weight condition (Equal vs LAVA Reverse), columns = the five fixed seeds. Click any thumbnail-level grid to open the labeled composite at full resolution.</p>
+<div class="transform">
+<h2 id="negate">negate</h2>
+<p><strong>What it does in latent:</strong> Elementwise sign flip on the latent tensor. Self-inverse but destroys the Gaussian-noise scale assumption used by the scheduler.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/negate/labeled_grid.png" target="_blank">
+<img src="by_transform/negate/labeled_grid.png" alt="negate labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/negate/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/negate/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/negate/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/negate/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/negate/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/negate/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/negate/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/negate/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/negate/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/negate/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="skew">skew</h2>
+<p><strong>What it does in latent:</strong> Affine shear by 15 degrees with bilinear interpolation. Inverse is the negative shear; non-exact for finite grids.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/skew/labeled_grid.png" target="_blank">
+<img src="by_transform/skew/labeled_grid.png" alt="skew labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/skew/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/skew/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/skew/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/skew/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/skew/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/skew/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/skew/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/skew/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/skew/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/skew/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="pixel_permute">pixel_permute</h2>
+<p><strong>What it does in latent:</strong> Random permutation of all 64x64 = 4096 spatial positions, shared across channels. Permutation indices fixed by seed 12345.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/pixel_permute/labeled_grid.png" target="_blank">
+<img src="by_transform/pixel_permute/labeled_grid.png" alt="pixel_permute labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/pixel_permute/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/pixel_permute/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/pixel_permute/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/pixel_permute/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/pixel_permute/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/pixel_permute/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/pixel_permute/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/pixel_permute/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/pixel_permute/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/pixel_permute/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="patch_permute_8x8">patch_permute_8x8</h2>
+<p><strong>What it does in latent:</strong> 8x8 grid of 8x8 patches randomly permuted as units. Permutation indices fixed by seed 23456.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/patch_permute_8x8/labeled_grid.png" target="_blank">
+<img src="by_transform/patch_permute_8x8/labeled_grid.png" alt="patch_permute_8x8 labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/patch_permute_8x8/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/patch_permute_8x8/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="inner_circle">inner_circle</h2>
+<p><strong>What it does in latent:</strong> Inner circle of radius 24/64 rotated 180 degrees; outer annulus stays. The 180-degree rotation makes this self-inverse on the mask.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/inner_circle/labeled_grid.png" target="_blank">
+<img src="by_transform/inner_circle/labeled_grid.png" alt="inner_circle labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/inner_circle/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/inner_circle/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/inner_circle/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/inner_circle/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/inner_circle/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/inner_circle/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/inner_circle/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/inner_circle/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/inner_circle/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/inner_circle/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="square_hinge_tophalf">square_hinge_tophalf</h2>
+<p><strong>What it does in latent:</strong> Top half of the latent (rows 0..31) rotated 180 degrees; bottom half stays. Self-inverse.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/square_hinge_tophalf/labeled_grid.png" target="_blank">
+<img src="by_transform/square_hinge_tophalf/labeled_grid.png" alt="square_hinge_tophalf labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/square_hinge_tophalf/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/square_hinge_tophalf/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+<div class="transform">
+<h2 id="jigsaw_4x4">jigsaw_4x4</h2>
+<p><strong>What it does in latent:</strong> 4x4 grid of 16x16 patches randomly permuted (different seed from patch_permute_8x8: 54321). 16 jigsaw pieces.</p>
+<p class="prompts">Prompt A: "An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background"</p>
+<p class="prompts">Prompt B: "An oil painting of a standing rooster with colorful feathers, simple background"</p>
+<a href="by_transform/jigsaw_4x4/labeled_grid.png" target="_blank">
+<img src="by_transform/jigsaw_4x4/labeled_grid.png" alt="jigsaw_4x4 labeled grid">
+</a>
+<details><summary>10 individual images (5 seeds &times; 2 weights)</summary><ul>
+<li><a href="by_transform/jigsaw_4x4/seed42_w_equal.png" target="_blank">seed42, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed42_w_reverse.png" target="_blank">seed42, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed123_w_equal.png" target="_blank">seed123, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed123_w_reverse.png" target="_blank">seed123, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed777_w_equal.png" target="_blank">seed777, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed777_w_reverse.png" target="_blank">seed777, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed2024_w_equal.png" target="_blank">seed2024, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed2024_w_reverse.png" target="_blank">seed2024, Reverse [0.40, 0.60]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed7_w_equal.png" target="_blank">seed7, Equal [0.5, 0.5]</a></li>
+<li><a href="by_transform/jigsaw_4x4/seed7_w_reverse.png" target="_blank">seed7, Reverse [0.40, 0.60]</a></li>
+</ul></details>
+</div>
+</body></html>
