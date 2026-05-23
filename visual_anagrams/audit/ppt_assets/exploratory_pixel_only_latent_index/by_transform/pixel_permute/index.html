@@ -108,15 +108,23 @@ main { max-width: 1480px; margin: 0 auto; padding: 22px 28px 60px; }
 <header>
   <div class="crumbs"><a href="../../">&larr; Exploratory index</a> &middot; <a href="../../../../../">&larr; LAVA project</a></div>
   <h1>pixel_permute</h1>
-  <p>Transform mechanism (latent side): Random permutation of all 64x64 = 4096 spatial positions, shared across channels. Permutation indices fixed by seed 12345.</p>
+  <p>Transform mechanism (latent side): Random permutation of all 64x64 = 4096 spatial positions, shared across channels (Geng-style exact permutation). Permutation indices fixed by seed 12345.</p>
 </header>
 <main>
   <div class="caveat">
-    <strong>Exploratory only.</strong> This transform breaks the latent-equivariance assumption documented in Geng et al. (CVPR 2024, &sect;3.5).
-    Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>.
-    The formal LAVA experiment is restricted to grid-preserving transforms (rotations and flips).
+    <strong>Exploratory only.</strong> Even when the latent-side tensor
+    operation is exact (e.g.\ a pixel or patch permutation), the decoded
+    image-space meaning is not guaranteed: the VAE encoder-decoder is
+    only approximately equivariant under these spatial / sign operations,
+    so D(v_lat(z_t)) is generally not equal to v_img(D(z_t)).
+    Outputs may be visually interesting but
+    <strong>do not constitute formal evidence</strong>;
+    the formal LAVA experiment is restricted to grid-preserving transforms
+    (rotations and flips).
     <br>
-    <em>非正式探索。</em>这一 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5) 的 latent-equivariance 假设;
+    <em>非正式探索。</em>即使 latent-side tensor operation 是 exact (e.g.\ pixel 或 patch permutation),
+    解码后的 image-space 语义也不保证 —— VAE encoder/decoder 在这些操作下只是近似 equivariant,
+    所以一般情况下 D(v_lat(z_t)) 不等于 v_img(D(z_t)).
     输出视觉上可能有趣，但<strong>不构成正式证据</strong>。
   </div>
 

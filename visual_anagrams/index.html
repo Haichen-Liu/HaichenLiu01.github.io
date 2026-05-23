@@ -1169,9 +1169,11 @@
       <summary>4. Exploratory &mdash; pixel-only transforms forced into latent (NOT formal evidence)</summary>
 
       <p class="table-note" style="margin-top: 14px; background:#fff8e1; border:1px solid #f7d486; color:#6b4f00; padding:10px 14px; border-radius:8px;">
-        <strong>Exploratory only.</strong> These transforms break the latent-equivariance assumption documented in Geng et al. (CVPR 2024, Section 3.5). Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>. The formal LAVA experiment is deliberately restricted to grid-preserving transforms (rotations and flips). This section is a sandbox probe; data on this page does NOT enter any thesis / paper / quantitative claim.
+        <strong>Exploratory only.</strong> These are latent-side probes. <em>Pixel permutation, patch permutation, negate, and inner-circle</em> are close to Geng-style exact permutation views; <em>bilinear_skew, square_hinge_tophalf, and coarse_patch_permute_4x4</em> are simplified exploratory variants, <strong>not exact reproductions</strong> of Geng et al.'s original implementations.
         <br><br>
-        <em>非正式探索。</em>这些 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5) 的 latent-equivariance 假设。输出视觉上可能有趣，但<strong>不构成正式证据</strong>。正式 LAVA 实验仅限于 grid-preserving transform（rotation / flip）。这一节是 sandbox 探索，<strong>不进入</strong>任何 thesis / paper / 定量主张。
+        <strong>Key framing.</strong> Even when the latent-side tensor operation is exact, the decoded image-space meaning is not guaranteed because the VAE encoder-decoder is only approximately equivariant. Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>; the formal LAVA experiment is restricted to grid-preserving transforms (rotations and flips). This section is a sandbox probe; data on this page does NOT enter any thesis / paper / quantitative claim.
+        <br><br>
+        <em>非正式探索。</em>这些是 latent-side 探针。<em>Pixel permutation / patch permutation / negate / inner-circle</em> 接近 Geng-style 的 exact permutation；<em>bilinear_skew / square_hinge_tophalf / coarse_patch_permute_4x4</em> 是简化的探索版本，<strong>不是 Geng et al. 原 repo 的精确再现</strong>。即使 latent tensor 操作 exact，解码后的 image-space 语义仍不保证（VAE 只是近似 equivariant）。
       </p>
 
       <p class="table-note">
@@ -1198,9 +1200,9 @@
           </a>
         </div>
         <div class="audit-card">
-          <div class="audit-card-title">skew <span>15&deg; shear</span></div>
-          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/skew/labeled_grid.png" target="_blank">
-            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/skew/labeled_grid.png" alt="skew labeled grid" loading="lazy">
+          <div class="audit-card-title">bilinear_skew <span>simplified, not Geng's column-roll</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/bilinear_skew/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/bilinear_skew/labeled_grid.png" alt="skew labeled grid" loading="lazy">
           </a>
         </div>
         <div class="audit-card">
@@ -1222,15 +1224,15 @@
           </a>
         </div>
         <div class="audit-card">
-          <div class="audit-card-title">square_hinge_tophalf <span>half rotation</span></div>
+          <div class="audit-card-title">square_hinge_tophalf <span>simplified, not Geng's 3x3 hinge</span></div>
           <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/square_hinge_tophalf/labeled_grid.png" target="_blank">
             <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/square_hinge_tophalf/labeled_grid.png" alt="square_hinge_tophalf labeled grid" loading="lazy">
           </a>
         </div>
         <div class="audit-card">
-          <div class="audit-card-title">jigsaw_4x4 <span>16 pieces</span></div>
-          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/jigsaw_4x4/labeled_grid.png" target="_blank">
-            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/jigsaw_4x4/labeled_grid.png" alt="jigsaw_4x4 labeled grid" loading="lazy">
+          <div class="audit-card-title">coarse_patch_permute_4x4 <span>renamed from jigsaw_4x4</span></div>
+          <a href="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/coarse_patch_permute_4x4/labeled_grid.png" target="_blank">
+            <img src="audit/ppt_assets/exploratory_pixel_only_latent_index/by_transform/coarse_patch_permute_4x4/labeled_grid.png" alt="jigsaw_4x4 labeled grid" loading="lazy">
           </a>
         </div>
       </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exploratory: jigsaw_4x4</title>
+<title>Exploratory: bilinear_skew</title>
 <style>
 :root {
   --ink: #18202b;
@@ -107,22 +107,30 @@ main { max-width: 1480px; margin: 0 auto; padding: 22px 28px 60px; }
 <body>
 <header>
   <div class="crumbs"><a href="../../">&larr; Exploratory index</a> &middot; <a href="../../../../../">&larr; LAVA project</a></div>
-  <h1>jigsaw_4x4</h1>
-  <p>Transform mechanism (latent side): 4x4 grid of 16x16 patches randomly permuted (different seed from patch_permute_8x8: 54321). 16 jigsaw pieces.</p>
+  <h1>bilinear_skew</h1>
+  <p>Transform mechanism (latent side): Affine shear by 15 degrees with bilinear interpolation. Simplified variant: Geng et al.'s view_skew.py implements skew as an exact column-roll permutation; ours uses bilinear (with interpolation error) as an exploratory latent-side probe.</p>
 </header>
 <main>
   <div class="caveat">
-    <strong>Exploratory only.</strong> This transform breaks the latent-equivariance assumption documented in Geng et al. (CVPR 2024, &sect;3.5).
-    Outputs may be visually interesting but <strong>do not constitute formal evidence</strong>.
-    The formal LAVA experiment is restricted to grid-preserving transforms (rotations and flips).
+    <strong>Exploratory only.</strong> Even when the latent-side tensor
+    operation is exact (e.g.\ a pixel or patch permutation), the decoded
+    image-space meaning is not guaranteed: the VAE encoder-decoder is
+    only approximately equivariant under these spatial / sign operations,
+    so D(v_lat(z_t)) is generally not equal to v_img(D(z_t)).
+    Outputs may be visually interesting but
+    <strong>do not constitute formal evidence</strong>;
+    the formal LAVA experiment is restricted to grid-preserving transforms
+    (rotations and flips).
     <br>
-    <em>非正式探索。</em>这一 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5) 的 latent-equivariance 假设;
+    <em>非正式探索。</em>即使 latent-side tensor operation 是 exact (e.g.\ pixel 或 patch permutation),
+    解码后的 image-space 语义也不保证 —— VAE encoder/decoder 在这些操作下只是近似 equivariant,
+    所以一般情况下 D(v_lat(z_t)) 不等于 v_img(D(z_t)).
     输出视觉上可能有趣，但<strong>不构成正式证据</strong>。
   </div>
 
   <div class="case-meta">
     <dl>
-      <dt>Transform name</dt><dd>jigsaw_4x4</dd>
+      <dt>Transform name</dt><dd>bilinear_skew</dd>
       <dt>Prompt A (canonical)</dt><dd>An oil painting of a bouquet of bright flowers in a tall vase, soft light, simple background</dd>
       <dt>Prompt B (transformed)</dt><dd>An oil painting of a standing rooster with colorful feathers, simple background</dd>
       <dt>Seeds shown</dt><dd>42, 123, 777, 2024, 7 (5 fixed seeds)</dd>

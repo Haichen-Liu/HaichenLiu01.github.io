@@ -117,15 +117,28 @@ main { max-width: 1480px; margin: 0 auto; padding: 22px 28px 60px; }
 </header>
 <main>
   <div class="caveat">
-    <strong>Exploratory only.</strong> These transforms break the latent-equivariance
-    assumption documented in Geng et al. (CVPR 2024, &sect;3.5). Outputs may be
-    visually interesting but <strong>do not constitute formal evidence</strong>.
-    The formal LAVA experiment is deliberately restricted to grid-preserving
+    <strong>Exploratory only.</strong> These are latent-side probes.
+    <em>Pixel permutation, patch permutation, negate, and inner-circle</em>
+    are close to Geng-style exact permutation views;
+    <em>bilinear_skew, square_hinge_tophalf, and coarse_patch_permute_4x4</em>
+    are simplified exploratory variants, not exact reproductions of
+    Geng et al.'s original implementations.
+    <br><br>
+    <strong>Key framing:</strong> even when the latent-side tensor
+    operation is exact, the decoded image-space meaning is not
+    guaranteed because the VAE encoder--decoder is only approximately
+    equivariant under these spatial / sign operations. Outputs may be
+    visually interesting but <strong>do not constitute formal evidence</strong>;
+    the formal LAVA experiment is restricted to grid-preserving
     transforms (rotations and flips).
     <br><br>
-    <em>非正式探索。</em>这些 transform 破坏了 Geng et al. (CVPR 2024, &sect;3.5)
-    的 latent-equivariance 假设。输出视觉上可能有趣，但<strong>不构成正式证据</strong>;
-    正式 LAVA 实验仅限于 grid-preserving transform (rotation / flip) 范围内。
+    <em>非正式探索。</em>这些是 latent-side 探针。
+    <em>Pixel permutation、patch permutation、negate、inner-circle</em>
+    接近 Geng-style 的 exact permutation views；
+    <em>bilinear_skew、square_hinge_tophalf、coarse_patch_permute_4x4</em>
+    是简化的探索版本，不是 Geng et al. 原 repo 实现的精确再现。
+    即使 latent-side tensor operation 是 exact，解码后的 image-space
+    语义也不保证 (VAE 不严格 equivariant)。
   </div>
 
   <h2 style="font-size:17px;margin:26px 0 8px;border-left:4px solid #1657c5;padding-left:10px;">Cross-transform overview at seed = 42</h2>
@@ -142,13 +155,13 @@ main { max-width: 1480px; margin: 0 auto; padding: 22px 28px 60px; }
     Click any card below to open the full per-transform page: 5 fixed seeds &times; 2 weight conditions, each cell shows View A and View B side by side.
   </p>
   <div class="transform-grid">
-    <a class="transform-card" href="by_transform/negate/"><div class="transform-card-title">negate</div><img src="by_transform/negate/labeled_grid.png" alt="negate thumbnail" loading="lazy"><p>Elementwise sign flip on the latent tensor. Self-inverse but destroys the Gaussian-noise scale assumption used by the scheduler.</p></a>
-<a class="transform-card" href="by_transform/skew/"><div class="transform-card-title">skew</div><img src="by_transform/skew/labeled_grid.png" alt="skew thumbnail" loading="lazy"><p>Affine shear by 15 degrees with bilinear interpolation. Inverse is the negative shear; non-exact for finite grids.</p></a>
-<a class="transform-card" href="by_transform/pixel_permute/"><div class="transform-card-title">pixel_permute</div><img src="by_transform/pixel_permute/labeled_grid.png" alt="pixel_permute thumbnail" loading="lazy"><p>Random permutation of all 64x64 = 4096 spatial positions, shared across channels. Permutation indices fixed by seed 12345.</p></a>
-<a class="transform-card" href="by_transform/patch_permute_8x8/"><div class="transform-card-title">patch_permute_8x8</div><img src="by_transform/patch_permute_8x8/labeled_grid.png" alt="patch_permute_8x8 thumbnail" loading="lazy"><p>8x8 grid of 8x8 patches randomly permuted as units. Permutation indices fixed by seed 23456.</p></a>
-<a class="transform-card" href="by_transform/inner_circle/"><div class="transform-card-title">inner_circle</div><img src="by_transform/inner_circle/labeled_grid.png" alt="inner_circle thumbnail" loading="lazy"><p>Inner circle of radius 24/64 rotated 180 degrees; outer annulus stays. The 180-degree rotation makes this self-inverse on the mask.</p></a>
-<a class="transform-card" href="by_transform/square_hinge_tophalf/"><div class="transform-card-title">square_hinge_tophalf</div><img src="by_transform/square_hinge_tophalf/labeled_grid.png" alt="square_hinge_tophalf thumbnail" loading="lazy"><p>Top half of the latent (rows 0..31) rotated 180 degrees; bottom half stays. Self-inverse.</p></a>
-<a class="transform-card" href="by_transform/jigsaw_4x4/"><div class="transform-card-title">jigsaw_4x4</div><img src="by_transform/jigsaw_4x4/labeled_grid.png" alt="jigsaw_4x4 thumbnail" loading="lazy"><p>4x4 grid of 16x16 patches randomly permuted (different seed from patch_permute_8x8: 54321). 16 jigsaw pieces.</p></a>
+    <a class="transform-card" href="by_transform/negate/"><div class="transform-card-title">negate</div><img src="by_transform/negate/labeled_grid.png" alt="negate thumbnail" loading="lazy"><p>Elementwise sign flip on the latent tensor (Geng-style; SD v1.5 has no DeepFloyd-style variance channel so the symmetric negate applies to all 4 noise channels). Self-inverse, exact tensor op.</p></a>
+<a class="transform-card" href="by_transform/bilinear_skew/"><div class="transform-card-title">bilinear_skew</div><img src="by_transform/bilinear_skew/labeled_grid.png" alt="bilinear_skew thumbnail" loading="lazy"><p>Affine shear by 15 degrees with bilinear interpolation. Simplified variant: Geng et al.'s view_skew.py implements skew as an exact column-roll permutation; ours uses bilinear (with interpolation error) as an exploratory latent-side probe.</p></a>
+<a class="transform-card" href="by_transform/pixel_permute/"><div class="transform-card-title">pixel_permute</div><img src="by_transform/pixel_permute/labeled_grid.png" alt="pixel_permute thumbnail" loading="lazy"><p>Random permutation of all 64x64 = 4096 spatial positions, shared across channels (Geng-style exact permutation). Permutation indices fixed by seed 12345.</p></a>
+<a class="transform-card" href="by_transform/patch_permute_8x8/"><div class="transform-card-title">patch_permute_8x8</div><img src="by_transform/patch_permute_8x8/labeled_grid.png" alt="patch_permute_8x8 thumbnail" loading="lazy"><p>8x8 grid of 8x8 patches randomly permuted as units (Geng-style exact patch permutation). Permutation indices fixed by seed 23456.</p></a>
+<a class="transform-card" href="by_transform/inner_circle/"><div class="transform-card-title">inner_circle</div><img src="by_transform/inner_circle/labeled_grid.png" alt="inner_circle thumbnail" loading="lazy"><p>Inner circle of radius 24/64 rotated 180 degrees; outer annulus stays (mask + 180 rot, both exact). Geng's repo implements this as a true pixel permutation; ours is mask + torch.rot90, which is also interpolation-free and behaves equivalently for our scale.</p></a>
+<a class="transform-card" href="by_transform/square_hinge_tophalf/"><div class="transform-card-title">square_hinge_tophalf</div><img src="by_transform/square_hinge_tophalf/labeled_grid.png" alt="square_hinge_tophalf thumbnail" loading="lazy"><p>Top half of the latent (rows 0..31) rotated 180 degrees; bottom half stays. Simplified variant: Geng et al.'s make_square_hinge is a 3x3 grid of sub-squares with alternating 90 deg rotations, which is a full pixel permutation. Ours is a one-axis half-rotation.</p></a>
+<a class="transform-card" href="by_transform/coarse_patch_permute_4x4/"><div class="transform-card-title">coarse_patch_permute_4x4</div><img src="by_transform/coarse_patch_permute_4x4/labeled_grid.png" alt="coarse_patch_permute_4x4 thumbnail" loading="lazy"><p>4x4 grid of 16x16 patches randomly permuted (different seed from patch_permute_8x8: 54321). Renamed from earlier 'jigsaw_4x4' to avoid confusion: Geng et al.'s view_jigsaw.py uses 16 fixed puzzle-piece templates with piece-matching constraints, whereas ours is just a coarser patch permutation.</p></a>
   </div>
 </main>
 </body>
