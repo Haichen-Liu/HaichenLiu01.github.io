@@ -74,11 +74,7 @@ Welcome to explore and connect! 🌟
 
 ---
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
-  <img src="{{ '/images/ED1.jpg' | relative_url }}" style="width: 100%; display: block;">
-  <img src="{{ '/images/ED2.jpg' | relative_url }}" style="width: 100%; display: block;">
-  <img src="{{ '/images/TJ1.jpg' | relative_url }}" style="width: 100%; display: block;">
-</div>
+<img src="{{ '/images/ED1.jpg' | relative_url }}" style="width: 100%; display: block;">
 
 
 
