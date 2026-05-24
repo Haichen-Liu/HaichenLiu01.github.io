@@ -72,6 +72,14 @@ For an up-to-date list of my scholarly works, including publications and citatio
 
 Welcome to explore and connect! 🌟
 
+---
+
+### 🌆 Places
+
+| **Edinburgh — Old Town from Calton Hill** | **Edinburgh — BioQuarter** | **Tianjin — Century Clock** |
+| :---: | :---: | :---: |
+| <img src="{{ '/images/ED1.jpg' | relative_url }}" width="100%"> | <img src="{{ '/images/ED2.jpg' | relative_url }}" width="100%"> | <img src="{{ '/images/TJ1.jpg' | relative_url }}" width="100%"> |
+
 
 
 
