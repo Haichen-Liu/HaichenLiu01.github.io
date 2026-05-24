@@ -1241,6 +1241,51 @@
         Reading rule: this section visually confirms that the diffusion pipeline still produces output even when the latent-equivariance assumption is broken, but the image-space semantics of the View B branch are not guaranteed. The formal LAVA quantitative claims (Sections 1-3 above) use only grid-preserving transforms.
       </p>
     </details>
+
+    <details>
+      <summary>5. Exploratory N-view extension &mdash; 3-view sandbox (NOT formal evidence)</summary>
+
+      <p class="table-note" style="margin-top: 14px; background:#fff8e1; border:1px solid #f7d486; color:#6b4f00; padding:10px 14px; border-radius:8px;">
+        <strong>Exploratory only.</strong> The LAVA pipeline is architecturally N-view (the fusion loop iterates over <code>zip(prompts, views)</code>), so 3-view generation runs without any code change. This section shows a 3-view sandbox using a Geng-style prompt triplet (waterfall + rabbit + teddy bear) with the 3 cardinal rotations <code>identity / rotate_90 / rotate_180</code> &mdash; all exact orthogonal transforms.
+        <br><br>
+        <strong>Key framing.</strong> Empirically, 3-view is substantially harder than 2-view: three prompts compete for latent capacity, so each individual view reading is weaker than in the 2-view case. A naive anti-canonical rebalance (<code>[0.25, 0.375, 0.375]</code> vs equal <code>[1/3, 1/3, 1/3]</code>) is barely visible because the per-view weight shifts are small. <strong>This is a sandbox probe, NOT formal evidence</strong>; the formal n=35 LAVA paired ablation stays at 2-view for controlled scope. 3-view / N-view rebalancing is a clean future-work direction.
+        <br><br>
+        <em>非正式探索。</em>LAVA pipeline 架构上原生支持 N-view（fusion loop 在 <code>zip(prompts, views)</code> 上迭代），所以 3-view 不需要任何代码改动。这一节用 Geng-style prompt triplet（waterfall + rabbit + teddy bear）+ 3 个 cardinal rotation（identity / rotate_90 / rotate_180）跑 sandbox。<strong>不是正式证据</strong>；正式 n=35 LAVA 保持 2-view 以控制 scope，N-view rebalancing 留作 future work。
+      </p>
+
+      <p class="table-note">
+        <strong>3-view setup.</strong>
+        View A (identity) = "An oil painting of a peaceful waterfall in a forest, detailed trees and flowing water";
+        View B (rotate_90) = "An oil painting of a rabbit sitting on green grass, soft fur, simple background";
+        View C (rotate_180) = "An oil painting of a teddy bear holding a flower, soft toy textures, simple background".
+        5 seeds &times; 2 weight conditions = 10 latent generations on SD v1.5 (512&times;512, 50 steps).
+        Pixel comparison generated separately via DeepFloyd IF Stage II (256&times;256, 30 steps, Geng default equal weighting).
+      </p>
+
+      <div class="figure-block" style="margin-top: 14px;">
+        <a href="audit/ppt_assets/exploratory_3view_index/latent_only_overview.png" target="_blank">
+          <img src="audit/ppt_assets/exploratory_3view_index/latent_only_overview.png" alt="3-view latent-only overview" loading="lazy" style="max-width: 100%; border: 1px solid #d0d7de; border-radius: 4px;">
+        </a>
+        <p class="figure-caption">
+          <span class="fig-label">3-view latent-only overview.</span>
+          Five seeds (rows) by six cells (Equal V1/V2/V3 | Rebalance V1/V2/V3). Equal = <code>[1/3, 1/3, 1/3]</code>; Rebalance = <code>[0.25, 0.375, 0.375]</code> (anti-canonical boost on the two hidden views). Visible difference between Equal and Rebalance rows is small at this weight shift &mdash; consistent with the 3-view dilution observation.
+        </p>
+      </div>
+
+      <div class="figure-block">
+        <a href="audit/ppt_assets/exploratory_3view_index/pixel_vs_latent_composite.png" target="_blank">
+          <img src="audit/ppt_assets/exploratory_3view_index/pixel_vs_latent_composite.png" alt="3-view pixel vs latent composite" loading="lazy" style="max-width: 100%; border: 1px solid #d0d7de; border-radius: 4px;">
+        </a>
+        <p class="figure-caption">
+          <span class="fig-label">3-view pixel vs latent side-by-side.</span>
+          Same 5 seeds, 3 cell groups per row: Pixel DeepFloyd IF (equal weight, Geng default) | Latent SD v1.5 (equal) | Latent SD v1.5 (rebalance). Pixel side uses Geng's <code>:1.2</code> emphasis on V2/V3 prompts; latent side uses the plain LAVA variant. Cross-regime CLIP-Avg ranking is <strong>not</strong> claimed (encoder mismatch: DeepFloyd IF + T5 vs SD v1.5 + CLIP); side-by-side is qualitative visual reference only.
+        </p>
+      </div>
+
+      <p class="table-note">
+        Reading rule: 3-view extension is architecturally trivial (no code change), but evaluation metrics (Balance_Gap, paired t-test) need rewriting because the natural 2-view <code>|V1 - V2|</code> has multiple natural generalisations to 3-view (<code>max - min</code>, std, etc.). Weight recalibration is also needed. None of this enters the formal thesis quantitative tables.
+      </p>
+    </details>
   </section>
   </body>
 </html>
