@@ -74,11 +74,11 @@ Welcome to explore and connect! 🌟
 
 ---
 
-### 🌆 Places
-
-| **Edinburgh — Old Town from Calton Hill** | **Edinburgh — BioQuarter** | **Tianjin — Century Clock** |
-| :---: | :---: | :---: |
-| <img src="{{ '/images/ED1.jpg' | relative_url }}" width="100%"> | <img src="{{ '/images/ED2.jpg' | relative_url }}" width="100%"> | <img src="{{ '/images/TJ1.jpg' | relative_url }}" width="100%"> |
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+  <img src="{{ '/images/ED1.jpg' | relative_url }}" style="width: 100%; display: block;">
+  <img src="{{ '/images/ED2.jpg' | relative_url }}" style="width: 100%; display: block;">
+  <img src="{{ '/images/TJ1.jpg' | relative_url }}" style="width: 100%; display: block;">
+</div>
 
 
 
