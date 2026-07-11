@@ -74,7 +74,10 @@ Welcome to explore and connect! 🌟
 
 ---
 
-<img src="{{ '/images/ED1.jpg' | relative_url }}" style="width: 100%; display: block;">
+<div style="display: flex; gap: 1%; margin-top: 8px;">
+  <img src="{{ '/images/ED1.jpg' | relative_url }}" style="width: 70%; display: block;">
+  <img src="{{ '/images/TJ1.jpg' | relative_url }}" style="width: 29%; display: block;">
+</div>
 
 
 
